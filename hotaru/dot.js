@@ -10,10 +10,8 @@
         
         // this.color = { red: 100, green: 255, blue: 0, alpha: 100 };
         this.color = 'rgba(100, 255, 0, 0.5)';
-
         this.nextPositon = { x: 0, y: 0 };
         this.differPosition = { x: 0, y: 0 };
-
         this.brightFlg = true;
         this.alphaSpeed  = 0.05;
         this.targetAlpha = 1;
@@ -25,8 +23,8 @@
     Dot.prototype = {
 
         init: function() {
-            this.x = Math.random(0, stage.stageWidth);
-            this.y = Math.random(0, stage.stageHeight);
+            this.x = Math.floor(Math.random() * stage.stageWidth);
+            this.y = Math.floor(Math.random() * stage.stageHeight);
             this.alpha = Math.random();
         },
 

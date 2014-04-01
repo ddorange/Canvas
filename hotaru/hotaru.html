@@ -1,14 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>Hotaru</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../_common/reset.css"/>
 </head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="dot.js"></script>
-<!-- <script src="view.js"></script> -->
-<script src="hotaru.js"></script>
 <body>
-    <canvas id="canvas" width="400" height="600" style="background-color: #000;"></canvas>
+    <canvas id="canvas" width="320" height="480" style="background-color: #000;"></canvas>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="dot.js"></script>
+<script src="hotaru.js"></script>
+<script>
+$(function(){
+    window.app.init();
+});
+</script>
 </body>
 </html>
