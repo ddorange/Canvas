@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Easing</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="600" style="background-color: #000;"></canvas>
+<script>
+(function(w) {
+    var doc = document,
+        canvas  = doc.getElementById('canvas'),
+        loop,
+        clear,
+        app;
+
+    if ( !canvas || !canvas.getContext ) {
+        return false;
+    }
+
+    // stageの作成
+    w.stage = w.stage || canvas.getContext('2d');
+    stage.stageWidth  = canvas.width;
+    stage.stageHeight = canvas.height;
+    w.stage = stage;
+
+    clear = function() {
+        stage.clearRect( 0, 0, stage.stageWidth, stage.stageHeight );
+    }
+
+    loop = function() {
+        clear();
+    }
+
+    setInterval(function(){ loop(); }, 30);
+
+
+})(window);
+</script>
+</body>
+</html>
