@@ -2,10 +2,7 @@
 
     'use strict';
 
-    var stage = w.stage,
-        Ball;
-
-    Ball = function(){
+    var Ball = function(){
         this.init.apply(this, arguments);
     };
 
@@ -24,7 +21,7 @@
             stage.arc( this.x, this.y, this.radius, 0, Math.PI * 2, true );
             stage.fill();
         }
-    }
+    };
 
 
     w.Ball = Ball;
