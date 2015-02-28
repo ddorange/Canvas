@@ -1,13 +1,5 @@
-# イージング計算式
-``` html
-
-
-```
-
-
-
-
-## Velocity 【速度】
+# Physics
+## Velocity
 ``` js
 var x = 0,
     targetX = 200,
@@ -27,7 +19,7 @@ timer = setInterval(function(){
 }, 100);
 ```
 
-## Acceleration 【加速度】
+## Acceleration
 ``` js
 var x = 0,
     targetX = 200,
@@ -49,7 +41,7 @@ timer = setInterval(function(){
 }, 100);
 ```
 
-## Friction 【摩擦】
+## Friction
 ``` js
 var x = 0,
     targetX = 200,
