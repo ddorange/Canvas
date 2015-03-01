@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>Screen Effect</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../asset/css/reset.css"/>
+</head>
+<body>
+    <canvas id="canvas" width="320" height="480" style="background-color: #999; background-image: url('http://lorempixel.com/320/480/technics/');"></canvas>
+
+    <div>
+        <button id="js-out">out</button>
+        <button id="js-square-out">square-out</button>
+        <button id="js-hole-out">hole-out</button>
+    </div>
+
+    <div>
+        <button id="js-clear">clear</button>
+    </div>
+
+<script src="../asset/js/jquery-2.1.3.js"></script>
+<script src="../asset/js/lodash.3.3.1.js"></script>
+<script src="./screen-effect.js"></script>
+<script>
+$(function(){
+
+    var $doc = $(document),
+        sf = createScreenEffect();
+    
+    sf.init(document.getElementById('canvas'));
+
+    // kick
+    $doc.on('click', '#js-out',        function (e) { sf.out();       });
+    $doc.on('click', '#js-square-out', function (e) { sf.squareOut(); });
+    $doc.on('click', '#js-hole-out',   function (e) { sf.holeOut();   });
+    $doc.on('click', '#js-clear',      function (e) {
+        sf.stop();
+        sf.clearStage();
+    });
+});
+</script>
+</body>
+</html>
